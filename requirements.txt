@@ -1,6 +1,6 @@
-clean-text==0.3.0
-hazm==0.7.0
-numpy<1.20
-torch==1.7.1
-tqdm==4.46.1
-transformers==4.3.3
+clean-text==0.6.0
+hazm==0.10.0
+numpy==1.24.3
+torch
+tqdm==4.66.2
+transformers==4.38.2
