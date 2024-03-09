@@ -128,7 +128,7 @@ def spell_checking_on_sents(model, vocab, device, normalizer, txt):
     test_data = [(normalizer.normalize(t), normalizer.normalize(t)) for t in sents]
     greedy_results = model_inference(model, test_data, topk=1, DEVICE=device, BATCH_SIZE=1, vocab_=vocab)
 
-    corrected_text = ''.join([line['predicted'] + splitter for line, splitter in zip(greedy_results, splitters)])
+    corrected_text = ''.join([line['predicted'] + splitter for line, splitter in zip(greedy_results, splitters + ['\n'])])
     
     return corrected_text
 
